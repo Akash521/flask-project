@@ -20,3 +20,8 @@ def get_user(username):
     if user:
         return jsonify(user)
     return jsonify({"error": "User not found"}), 404
+
+# Define your route
+@user_routes.route('/users/greetings', methods=['GET'])
+def get_users():
+    return jsonify({"message": "Hello How are you all people"})
